@@ -1,0 +1,1750 @@
+/* =========================================================
+   ST PAULS CUP - SHORT PITCH CRICKET TOURNAMENT
+   Official Stylesheet: Modern Light, Minimal & Vibrant Sporty Theme
+   ========================================================= */
+
+/* --- 1. CSS Custom Properties / Design Tokens --- */
+:root {
+  /* Light & Colorful Base Palette (NOT plain white!) */
+  --bg-deep: #F1F5F9;           /* Slate 100 */
+  --bg-main: #F8FAFC;           /* Slate 50 airy canvas */
+  --bg-surface: #FFFFFF;        /* Crisp card surface */
+  --bg-surface-elevated: #FFFFFF;
+  --bg-surface-subtle: #F8FAFC;
+  
+  /* Primary Sport Accent Colors (Vibrant, high contrast) */
+  --gold-primary: #D97706;      /* Rich Athletic Gold */
+  --gold-bright: #F59E0B;       /* Bright Sun Gold */
+  --gold-hover: #B45309;        /* Deep Gold Hover */
+  --gold-light: #FEF3C7;        /* Soft Pastel Amber */
+  --gold-subtle: rgba(245, 158, 11, 0.12);
+  --gold-border: rgba(245, 158, 11, 0.35);
+
+  --green-field: #059669;       /* Cricket Turf Emerald */
+  --green-hover: #047857;
+  --green-light: #D1FAE5;       /* Soft Turf Green */
+  --green-subtle: rgba(16, 185, 129, 0.12);
+  --green-border: rgba(16, 185, 129, 0.35);
+
+  --blue-athletic: #2563EB;     /* Royal Athletic Blue */
+  --blue-light: #DBEAFE;
+  --blue-subtle: rgba(37, 99, 235, 0.10);
+  --blue-border: rgba(37, 99, 235, 0.30);
+
+  --red-accent: #DC2626;        /* High-contrast Red for Deadline & Warnings */
+  --red-light: #FEE2E2;
+  --red-subtle: rgba(220, 38, 38, 0.10);
+  --red-border: rgba(220, 38, 38, 0.30);
+
+  --purple-accent: #7C3AED;     /* Regal Purple */
+  --purple-light: #EDE9FE;
+  
+  --cyan-accent: #0891B2;       /* Crisp Cyan */
+  --cyan-light: #CFFAFE;
+
+  /* Typography Colors - High Readability on Light Theme */
+  --text-main: #0F172A;         /* Slate 900 - High-contrast headings */
+  --text-secondary: #334155;    /* Slate 700 - Highly legible body */
+  --text-muted: #64748B;        /* Slate 500 - Secondary details */
+  --text-dark: #0F172A;
+
+  /* Borders & Shadows */
+  --border-light: rgba(148, 163, 184, 0.22);
+  --border-medium: rgba(148, 163, 184, 0.38);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.07);
+  --shadow-lg: 0 16px 36px rgba(15, 23, 42, 0.10);
+  --shadow-gold: 0 6px 20px rgba(217, 119, 6, 0.22);
+
+  /* Typography Stacks */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.25s ease;
+}
+
+/* --- 2. CSS Reset & Base Rules --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  /* Colorful, vibrant light mesh background - distinct from flat white */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.12) 0px, transparent 45%),
+    radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.12) 0px, transparent 45%),
+    radial-gradient(at 50% 30%, rgba(59, 130, 246, 0.07) 0px, transparent 55%),
+    radial-gradient(at 15% 70%, rgba(245, 158, 11, 0.10) 0px, transparent 45%),
+    radial-gradient(at 85% 85%, rgba(16, 185, 129, 0.12) 0px, transparent 45%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* --- 3. Top Announcement Bar --- */
+.announcement-bar {
+  background: linear-gradient(90deg, #D97706 0%, #EA580C 50%, #D97706 100%);
+  color: #FFFFFF;
+  font-size: 0.86rem;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 10px rgba(217, 119, 6, 0.2);
+}
+
+.announcement-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.badge-gold {
+  background-color: #FEF3C7;
+  color: #92400E;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-text {
+  font-weight: 500;
+}
+
+.announcement-link {
+  color: #FFFFFF;
+  text-decoration: underline;
+  font-weight: 700;
+  margin-left: 0.25rem;
+}
+
+.announcement-link:hover {
+  color: #FEF3C7;
+}
+
+/* --- 4. Site Header & Brand Navigation --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  position: relative;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo Box Placeholder Styling */
+.college-logo-box {
+  flex-shrink: 0;
+}
+
+.logo-placeholder {
+  width: 52px;
+  height: 52px;
+  border: 2px dashed var(--gold-bright);
+  border-radius: var(--radius-md);
+  background: #FFFBEB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  padding: 4px;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.15);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.logo-placeholder:hover {
+  transform: scale(1.04);
+  border-color: var(--gold-hover);
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.logo-tag {
+  font-size: 0.55rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #B45309;
+}
+
+/* Actual College Logo replacement class (if user loads an <img> later) */
+.college-logo-img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+/* Header Text / Institutional Credentials */
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.college-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--green-field);
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.dot-separator {
+  color: #CBD5E1;
+  font-size: 0.7rem;
+}
+
+.college-name {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.organizer-subline {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.3;
+}
+
+.organizer-subline strong {
+  color: var(--gold-primary);
+  font-weight: 700;
+}
+
+/* Navigation Menu */
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--gold-primary);
+  background-color: var(--gold-light);
+}
+
+.nav-link.active {
+  color: var(--gold-hover);
+  background-color: var(--gold-light);
+  font-weight: 700;
+}
+
+/* Mobile Hamburger Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+}
+
+.hamburger-bar {
+  display: block;
+  width: 100%;
+  height: 2.5px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: all var(--transition-fast);
+}
+
+/* --- 5. Hero Section --- */
+.hero-section {
+  position: relative;
+  padding: 3.8rem 0 3.2rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  overflow: hidden;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 50% 15%, rgba(245, 158, 11, 0.12) 0%, transparent 60%),
+    radial-gradient(circle at 12% 80%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 88% 80%, rgba(59, 130, 246, 0.10) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #FFFBEB;
+  border: 1.5px solid #FCD34D;
+  color: #B45309;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.14);
+}
+
+.pill-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--gold-bright);
+}
+
+.hero-subheading-tag {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--green-field);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.3rem, 5.8vw, 4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.highlight-gold {
+  color: var(--gold-primary);
+  background: linear-gradient(135deg, #D97706 0%, #F59E0B 50%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.hero-tagline {
+  font-size: 1.18rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto 2.25rem;
+  font-weight: 500;
+}
+
+/* Tournament Highlights / Quick Stats Grid (Vibrant Colorful Cards) */
+.tournament-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  gap: 1.25rem;
+  max-width: 1080px;
+  margin: 0 auto 2.75rem;
+}
+
+.highlight-card {
+  border-radius: var(--radius-lg);
+  padding: 1.2rem 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.highlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Individual Colorful Themes for Highlight Cards (NOT plain white) */
+.highlight-card:nth-child(1) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FFFBEB 100%);
+  border: 1.5px solid #FDE68A;
+}
+
+.highlight-card:nth-child(2) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #ECFDF5 100%);
+  border: 1.5px solid #A7F3D0;
+}
+
+.highlight-card:nth-child(3) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FEFCE8 100%);
+  border: 1.5px solid #FEF08A;
+}
+
+.highlight-card:nth-child(4) {
+  background: linear-gradient(145deg, #FFFFFF 0%, #FEF2F2 100%);
+  border: 1.5px solid #FECACA;
+}
+
+.card-icon-wrap {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.card-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+
+.card-icon-wrap.gold {
+  background: #FEF3C7;
+  color: #D97706;
+  border: 1.5px solid #FCD34D;
+}
+
+.card-icon-wrap.green {
+  background: #D1FAE5;
+  color: #059669;
+  border: 1.5px solid #6EE7B7;
+}
+
+.card-icon-wrap.red {
+  background: #FEE2E2;
+  color: #DC2626;
+  border: 1.5px solid #FCA5A5;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.card-value {
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.card-value small {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.highlight-price {
+  color: var(--gold-primary);
+  font-weight: 800;
+}
+
+/* Hero Action Buttons */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-gold);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.32);
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  color: var(--text-main);
+  border: 1.5px solid #CBD5E1;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: #F8FAFC;
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-large {
+  padding: 0.95rem 2.2rem;
+  font-size: 1.05rem;
+}
+
+/* --- 6. Section Common Styles --- */
+.section {
+  padding: 4.8rem 0;
+  position: relative;
+}
+
+.section-payment {
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.7) 0%, rgba(254, 252, 232, 0.45) 50%, rgba(240, 253, 244, 0.5) 100%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.section-rules {
+  background: linear-gradient(180deg, rgba(240, 253, 244, 0.5) 0%, rgba(239, 246, 255, 0.45) 50%, rgba(248, 250, 252, 0.9) 100%);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.section-header {
+  margin-bottom: 3.2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #92400E;
+  background: #FEF3C7;
+  border: 1.5px solid #FCD34D;
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 1px 4px rgba(245, 158, 11, 0.12);
+}
+
+.cricket-tag {
+  color: #065F46;
+  background: #D1FAE5;
+  border-color: #6EE7B7;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 4vw, 2.65rem);
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.section-subtitle-large {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-top: 0.25rem;
+}
+
+.title-underline {
+  width: 64px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--gold-bright), var(--green-field));
+  border-radius: 2px;
+  margin: 1.1rem auto 1.1rem;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+/* --- 7. Registration & Payment Layout --- */
+.payment-layout-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.25rem;
+  align-items: start;
+}
+
+/* Left Column: Details & Steps */
+.registration-details-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.details-card, .steps-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.details-card:hover, .steps-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.details-card {
+  border-top: 4px solid var(--gold-bright);
+}
+
+.steps-card {
+  border-top: 4px solid var(--green-field);
+}
+
+.card-heading, .steps-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1.5px solid #F1F5F9;
+}
+
+.heading-icon, .step-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--gold-primary);
+}
+
+.detail-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #F1F5F9;
+  font-size: 0.96rem;
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.detail-name {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.detail-data {
+  color: var(--text-main);
+  text-align: right;
+  font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.highlight-deadline {
+  color: var(--red-accent);
+  background: var(--red-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid #FCA5A5;
+}
+
+/* Steps List */
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.steps-list li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  padding-left: 0.25rem;
+}
+
+.steps-list strong {
+  color: var(--text-main);
+}
+
+.info-alert-box {
+  background: #FEF3C7;
+  border: 1.5px solid #FCD34D;
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #92400E;
+  line-height: 1.45;
+}
+
+.alert-icon {
+  width: 20px;
+  height: 20px;
+  color: #D97706;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Right Column: Prominent Payment QR Card */
+.payment-card-col {
+  position: sticky;
+  top: 90px;
+}
+
+.payment-card {
+  background: linear-gradient(160deg, #FFFFFF 0%, #FFFBEB 45%, #FEF3C7 100%);
+  border: 2px solid var(--gold-bright);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2rem;
+  text-align: center;
+  box-shadow: 0 12px 36px rgba(245, 158, 11, 0.16), 0 4px 12px rgba(15, 23, 42, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast);
+}
+
+.payment-card:hover {
+  transform: translateY(-2px);
+}
+
+.payment-card-badge {
+  position: absolute;
+  top: 15px;
+  right: -32px;
+  background: var(--gold-bright);
+  color: #78350F;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.35rem 2.2rem;
+  transform: rotate(45deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.payment-amount-box {
+  margin-bottom: 1.5rem;
+}
+
+.amount-title {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #B45309;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.amount-value {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  line-height: 1.2;
+}
+
+.amount-sub {
+  font-size: 0.85rem;
+  color: #78350F;
+  font-weight: 500;
+}
+
+/* 
+   QR Code Box Styling:
+   Crisp clean square with high contrast for scanners
+*/
+.qr-code-wrapper {
+  margin: 0 auto 1.35rem;
+  width: 100%;
+  max-width: 240px;
+}
+
+.qr-code-box {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #FFFFFF;
+  border: 2.5px dashed var(--gold-primary);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.12);
+  transition: border-color var(--transition-fast);
+}
+
+.qr-code-box:hover {
+  border-color: var(--gold-hover);
+}
+
+.qr-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+}
+
+.qr-wireframe-lines {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+}
+
+.qr-scanner-icon svg {
+  width: 56px;
+  height: 56px;
+  stroke: var(--gold-primary);
+}
+
+.qr-placeholder-text {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: 0.5px;
+}
+
+.qr-placeholder-subtext {
+  font-size: 0.75rem;
+  color: var(--gold-hover);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* User's actual QR Image (once inserted) */
+.qr-code-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  padding: 8px;
+}
+
+.qr-scan-instruction {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.payment-note-box {
+  background: rgba(254, 243, 199, 0.6);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.85rem;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid var(--gold-primary);
+}
+
+.payment-note-text {
+  font-size: 0.84rem;
+  color: #78350F;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.receipt-info-box {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: #ECFDF5;
+  border: 1px solid #A7F3D0;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.85rem;
+  text-align: left;
+}
+
+.receipt-icon {
+  width: 22px;
+  height: 22px;
+  color: var(--green-field);
+  flex-shrink: 0;
+}
+
+.receipt-text {
+  font-size: 0.82rem;
+  color: #065F46;
+  line-height: 1.35;
+}
+
+/* --- 8. Rules & Regulations Section --- */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.rule-card {
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.65rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.rule-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Full Span Card for General Rules */
+.full-span-card {
+  grid-column: 1 / -1;
+}
+
+.rule-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px solid #F1F5F9;
+}
+
+.rule-number {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rule-title-group {
+  flex-grow: 1;
+}
+
+.rule-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.rule-category {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.rule-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rule-icon-box svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Individual Rule Card Color Variations (Vibrant & Lively) */
+
+/* Rule 1: Squad Guidelines (Athletic Royal Blue) */
+.rules-grid > .rule-card:nth-child(1) {
+  border-top: 4px solid #3B82F6;
+  background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 30%);
+  border-left: 1px solid #DBEAFE;
+  border-right: 1px solid #DBEAFE;
+  border-bottom: 1px solid #DBEAFE;
+}
+.rules-grid > .rule-card:nth-child(1) .rule-number {
+  background: #DBEAFE;
+  color: #1D4ED8;
+  border: 1px solid #BFDBFE;
+}
+.rules-grid > .rule-card:nth-child(1) .rule-icon-box {
+  background: #EFF6FF;
+  color: #2563EB;
+}
+
+/* Rule 2: Match Format (Emerald Turf Green) */
+.rules-grid > .rule-card:nth-child(2) {
+  border-top: 4px solid #10B981;
+  background: linear-gradient(180deg, #ECFDF5 0%, #FFFFFF 30%);
+  border-left: 1px solid #D1FAE5;
+  border-right: 1px solid #D1FAE5;
+  border-bottom: 1px solid #D1FAE5;
+}
+.rules-grid > .rule-card:nth-child(2) .rule-number {
+  background: #D1FAE5;
+  color: #047857;
+  border: 1px solid #A7F3D0;
+}
+.rules-grid > .rule-card:nth-child(2) .rule-icon-box {
+  background: #ECFDF5;
+  color: #059669;
+}
+
+/* Rule 3: Batting Powerplay (Featured Golden Highlight Card) */
+.rule-card-featured {
+  border: 2px solid var(--gold-bright);
+  background: linear-gradient(145deg, #FFFBEB 0%, #FEF3C7 35%, #FFFFFF 100%);
+  box-shadow: 0 10px 28px rgba(245, 158, 11, 0.16);
+}
+
+.highlight-badge {
+  background: var(--gold-bright);
+  color: #78350F;
+  border: 1px solid #D97706;
+}
+
+.highlight-text {
+  color: #B45309;
+}
+
+.rule-icon-box.gold {
+  color: #D97706;
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+}
+
+/* Rule 4: Standing Throw Rule (Cyan Accent) */
+.rules-grid > .rule-card:nth-child(4) {
+  border-top: 4px solid #06B6D4;
+  background: linear-gradient(180deg, #ECFEFF 0%, #FFFFFF 30%);
+  border-left: 1px solid #CFFAFE;
+  border-right: 1px solid #CFFAFE;
+  border-bottom: 1px solid #CFFAFE;
+}
+.rules-grid > .rule-card:nth-child(4) .rule-number {
+  background: #CFFAFE;
+  color: #0E7490;
+  border: 1px solid #A5F3FC;
+}
+.rules-grid > .rule-card:nth-child(4) .rule-icon-box {
+  background: #ECFEFF;
+  color: #0891B2;
+}
+
+/* Rule 5: Umpire's Decision (Discipline & Authority Red Warning Card) */
+.rule-card-warning {
+  border: 1.5px solid #FCA5A5;
+  background: linear-gradient(145deg, #FEF2F2 0%, #FFF5F5 40%, #FFFFFF 100%);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.08);
+}
+
+.warning-badge {
+  background: var(--red-accent);
+  color: #FFFFFF;
+  border: 1px solid #DC2626;
+}
+
+.warning-text {
+  color: #DC2626;
+}
+
+.rule-icon-box.red {
+  color: var(--red-accent);
+  background: #FEE2E2;
+  border: 1px solid #FCA5A5;
+}
+
+/* Rule 6: Registration Policy (Purple Accent) */
+.rules-grid > .rule-card:nth-child(6) {
+  border-top: 4px solid #8B5CF6;
+  background: linear-gradient(180deg, #F5F3FF 0%, #FFFFFF 30%);
+  border-left: 1px solid #EDE9FE;
+  border-right: 1px solid #EDE9FE;
+  border-bottom: 1px solid #EDE9FE;
+}
+.rules-grid > .rule-card:nth-child(6) .rule-number {
+  background: #EDE9FE;
+  color: #6D28D9;
+  border: 1px solid #DDD6FE;
+}
+.rules-grid > .rule-card:nth-child(6) .rule-icon-box {
+  background: #F5F3FF;
+  color: #7C3AED;
+}
+
+/* Rule 7: General Rules (Full Span Card - Green & Amber Gradient) */
+.rules-grid > .full-span-card {
+  border: 1.5px solid #86EFAC;
+  background: linear-gradient(145deg, #ECFDF5 0%, #FEFCE8 45%, #FFFFFF 100%);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.08);
+}
+.rules-grid > .full-span-card .rule-number {
+  background: #D1FAE5;
+  color: #047857;
+  border: 1px solid #A7F3D0;
+}
+.rules-grid > .full-span-card .rule-icon-box {
+  background: #ECFDF5;
+  color: #059669;
+}
+
+/* Rule Items List */
+.rule-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.rule-items-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.rule-items-list strong {
+  color: var(--text-main);
+}
+
+.bullet-check {
+  color: var(--green-field);
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.grid-rules {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.1rem 2.2rem;
+}
+
+/* --- Sportsmanship Banner & Minimal Neat Tick Mark Boxes --- */
+.sportsmanship-banner {
+  background: linear-gradient(135deg, #FFFBEB 0%, #ECFDF5 50%, #EFF6FF 100%);
+  border: 2px solid var(--gold-bright);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(245, 158, 11, 0.14), 0 4px 12px rgba(15, 23, 42, 0.04);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* 
+   Neat Minimal Tick Mark Boxes:
+   Size strictly reduced to minimal, clean circular badge framing the banner
+*/
+.banner-cricket-icons {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: #D1FAE5;
+  border: 1.5px solid #34D399;
+  color: var(--green-field);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.18);
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.banner-cricket-icons:hover {
+  transform: scale(1.08);
+  background: #A7F3D0;
+}
+
+.banner-cricket-icons svg {
+  width: 18px;
+  height: 18px;
+  stroke: var(--green-field);
+}
+
+.sportsmanship-content {
+  flex: 1;
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trophy-icon-wrap {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.25rem;
+  background: #FEF3C7;
+  border: 1.5px solid #FCD34D;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+}
+
+.trophy-icon-wrap svg {
+  width: 32px;
+  height: 32px;
+}
+
+.sportsmanship-motto {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3.5vw, 2.1rem);
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.sportsmanship-wish {
+  font-size: 1.15rem;
+  color: var(--green-field);
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+}
+
+.sportsmanship-action {
+  display: flex;
+  justify-content: center;
+}
+
+/* --- 9. Site Footer & Contacts --- */
+.site-footer {
+  background: linear-gradient(180deg, #F8FAFC 0%, #EEF2F6 100%);
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, #F59E0B, #10B981, #3B82F6) 1;
+  padding: 4rem 0 2rem;
+  color: var(--text-secondary);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1.6fr 0.9fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand-title {
+  font-family: var(--font-heading);
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.footer-brand-sub {
+  font-size: 0.78rem;
+  color: var(--green-field);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 1rem;
+}
+
+.footer-org {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+.footer-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.footer-dates-badge {
+  display: inline-block;
+  background: #FEF3C7;
+  border: 1.5px solid #FCD34D;
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #92400E;
+}
+
+.footer-col-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 36px;
+  height: 3px;
+  background: var(--gold-bright);
+  border-radius: 2px;
+}
+
+/* Official Contacts Cards */
+.contact-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-card {
+  background: #FFFFFF;
+  border: 1.5px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: #FCD34D;
+  background: #FFFBEB;
+  box-shadow: var(--shadow-md);
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  background: #FEF3C7;
+  border: 1px solid #FCD34D;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.contact-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.contact-tel-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 0.98rem;
+  width: fit-content;
+}
+
+.contact-tel-link:hover {
+  color: var(--gold-hover);
+  text-decoration: underline;
+}
+
+.tel-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Quick Links List */
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-nav-list a {
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  font-weight: 500;
+  transition: color var(--transition-fast), padding-left var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-nav-list a:hover {
+  color: var(--gold-primary);
+  padding-left: 5px;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-bar {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.footer-bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copyright-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.back-to-top:hover {
+  color: var(--gold-primary);
+  border-color: var(--gold-bright);
+  background: #FFFBEB;
+  transform: translateY(-2px);
+}
+
+.back-to-top svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* --- 10. Responsive Design & Media Queries --- */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+  .payment-layout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-card-col {
+    position: static;
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .header-container {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .brand-text .college-name {
+    font-size: 1.15rem;
+  }
+
+  .brand-text .college-meta {
+    font-size: 0.65rem;
+  }
+
+  .brand-text .organizer-subline {
+    font-size: 0.72rem;
+  }
+
+  /* Hamburger Toggle & Mobile Dropdown */
+  .menu-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    border-bottom: 3px solid var(--gold-bright);
+    padding: 1rem 1.25rem;
+    display: none;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .main-nav.nav-open {
+    display: block;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Rules Grid into 1 column on mobile */
+  .rules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-rules {
+    grid-template-columns: 1fr;
+  }
+
+  .tournament-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .sportsmanship-banner {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2rem 1.25rem;
+  }
+
+  .banner-cricket-icons {
+    width: 34px;
+    height: 34px;
+  }
+
+  .banner-cricket-icons svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+/* Small Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .details-card, .steps-card, .payment-card {
+    padding: 1.4rem 1.15rem;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .detail-data {
+    text-align: left;
+  }
+
+  .sportsmanship-banner {
+    padding: 1.85rem 1rem;
+  }
+
+  .sportsmanship-motto {
+    font-size: 1.25rem;
+  }
+
+  .qr-code-wrapper {
+    max-width: 210px;
+  }
+}

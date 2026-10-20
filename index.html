@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under 19 ST PAULS CUP | Short Pitch Cricket Tournament</title>
+  <meta name="description" content="Official website for Under 19 ST PAULS CUP - A PU Short Pitch Cricket Tournament organized by the Sports Club of ST PAULS COLLEGE. Registration fees, rules and contact details.">
+
+  <!-- Google Fonts for Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================
+       TOP NOTIFICATION BAR (Announcement)
+       ========================================================= -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <span class="badge badge-gold">IMPORTANT</span>
+      <span class="announcement-text">
+        <strong>Last Date for Team Registration:</strong> November 10th &bull; No on-the-spot registrations
+      </span>
+      <a href="#registration" class="announcement-link">Register Now &rarr;</a>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       WEBSITE HEADER & NAVIGATION
+       ========================================================= -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Institutional Branding & Logo Section -->
+      <div class="brand-wrapper">
+        <!-- 
+          ==========================================================
+          COLLEGE LOGO PLACEHOLDER:
+          Replace the SVG placeholder below with your actual college logo image file.
+          Example: <img src="college-logo.png" alt="ST PAULS COLLEGE Logo" class="college-logo-img">
+          ==========================================================
+        -->
+        <div class="college-logo-box">
+          <img src="college-logo.png" alt="ST PAULS COLLEGE Logo" class="college-logo-img">
+        </div>
+
+        <!-- College & Tournament Details in Header -->
+        <div class="brand-text">
+          <div class="college-meta">
+            <span class="affiliation-badge">Affiliated to Bangalore University</span>
+            <span class="dot-separator">&bull;</span>
+            <span class="naac-badge">NAAC Accredited</span>
+          </div>
+          <h1 class="college-name">ST PAULS COLLEGE</h1>
+          <p class="organizer-subline">Organized by the <strong>Sports Club of ST PAULS COLLEGE</strong></p>
+        </div>
+      </div>
+
+      <!-- Navigation Menu -->
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#registration" class="nav-link">Registration Fees</a>
+          </li>
+          <li class="nav-item">
+            <a href="#rules" class="nav-link">Rules & Regulations</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO / TOURNAMENT BANNER SECTION
+       ========================================================= -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-container">
+      
+      <div class="hero-pill">
+        <svg class="pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M12 3a9 9 0 0 0 0 18M12 3a9 9 0 0 1 0 18M3 12h18"/>
+        </svg>
+        <span>Sports Club of ST PAULS COLLEGE Presents</span>
+      </div>
+
+      <div class="hero-subheading-tag">A PU CRICKET COMPETITION</div>
+
+      <h2 class="hero-title">
+        Under 19 <span class="highlight-gold">ST PAULS CUP</span>
+      </h2>
+
+      <p class="hero-tagline">
+        Short Pitch Cricket Tournament &bull; 8-a-Side &bull; 5 Overs Knockout
+      </p>
+
+      <!-- Tournament Quick Stats / Key Information Grid -->
+      <div class="tournament-highlights-grid">
+        
+        <div class="highlight-card">
+          <div class="card-icon-wrap gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <span class="card-label">Tournament Dates</span>
+            <span class="card-value">November 11, 12 & 13</span>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="card-icon-wrap green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <span class="card-label">Tournament Venue</span>
+            <span class="card-value">ST PAULS COLLEGE CRICKET GROUND</span>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="card-icon-wrap gold">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="1" x2="12" y2="23"/>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <span class="card-label">Registration Fee</span>
+            <span class="card-value highlight-price">₹500 <small>per team</small></span>
+          </div>
+        </div>
+
+        <div class="highlight-card">
+          <div class="card-icon-wrap red">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <div class="card-info">
+            <span class="card-label">Registration Deadline</span>
+            <span class="card-value">November 10</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Call-to-Action Buttons -->
+      <div class="hero-actions">
+        <a href="#registration" class="btn btn-primary">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <line x1="2" y1="10" x2="22" y2="10"/>
+          </svg>
+          Registration & Payment
+        </a>
+        <a href="#rules" class="btn btn-secondary">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+            <polyline points="10 9 9 9 8 9"/>
+          </svg>
+          Rules & Regulations
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 1: REGISTRATION FEES & PAYMENT
+       ========================================================= -->
+  <section class="section section-payment" id="registration">
+    <div class="container">
+
+      <!-- Section Title Header -->
+      <div class="section-header text-center">
+        <div class="section-tag">OFFICIAL REGISTRATION</div>
+        <h2 class="section-title">TEAM REGISTRATION & PAYMENT</h2>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+          Secure your team's slot for the Under 19 ST PAULS CUP. Complete the entry fee payment before the registration deadline.
+        </p>
+      </div>
+
+      <div class="payment-layout-grid">
+        
+        <!-- Left Column: Tournament Details & Important Notice -->
+        <div class="registration-details-col">
+          
+          <div class="details-card">
+            <h3 class="card-heading">
+              <svg class="heading-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="16" x2="12" y2="12"/>
+                <line x1="12" y1="8" x2="12.01" y2="8"/>
+              </svg>
+              Tournament Registration Summary
+            </h3>
+
+            <div class="detail-rows">
+              <div class="detail-row">
+                <span class="detail-name">Tournament:</span>
+                <span class="detail-data font-bold">Under 19 ST PAULS CUP</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-name">Organizer:</span>
+                <span class="detail-data">Sports Club of ST PAULS COLLEGE</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-name">Registration Fee:</span>
+                <span class="detail-data font-bold highlight-price">₹500 per team</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-name">Last Date for Registration:</span>
+                <span class="detail-data highlight-deadline font-bold">November 10</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-name">Venue:</span>
+                <span class="detail-data">ST PAULS COLLEGE CRICKET GROUND</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-name">Tournament Dates:</span>
+                <span class="detail-data">November 11, 12 & 13</span>
+              </div>
+              <div class="detail-row">
+                <span class="detail-name">Competition Type:</span>
+                <span class="detail-data">A PU Cricket Competition (Knockout)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Static Informational Registration Steps -->
+          <div class="steps-card">
+            <h4 class="steps-title">
+              <svg class="step-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9 11 12 14 22 4"/>
+                <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+              Registration Instructions
+            </h4>
+            <ol class="steps-list">
+              <li>
+                <strong>Step 1:</strong> Scan the official tournament QR code on the payment card to pay <strong>₹500</strong>.
+              </li>
+              <li>
+                <strong>Step 2:</strong> Take a clear screenshot of the successful payment transaction showing the transaction/UTR ID.
+              </li>
+              <li>
+                <strong>Step 3:</strong> Share the payment screenshot along with your team name and 8 player names with the tournament coordinators.
+              </li>
+              <li>
+                <strong>Step 4:</strong> Receive confirmation of your slot before November 10th.
+              </li>
+            </ol>
+            <div class="info-alert-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="alert-icon">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/>
+                <line x1="12" y1="17" x2="12.01" y2="17"/>
+              </svg>
+              <span>No on-the-spot registrations will be accepted. Ensure your team registers on or before November 10th.</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Prominent Payment QR Card -->
+        <div class="payment-card-col">
+          <div class="payment-card">
+            
+            <div class="payment-card-badge">OFFICIAL PAYMENT</div>
+
+            <div class="payment-amount-box">
+              <span class="amount-title">Pay Registration Fee</span>
+              <div class="amount-value">Pay ₹500 per Team</div>
+              <span class="amount-sub">Entry fee for 8-player squad</span>
+            </div>
+
+            <!-- 
+              ==================================================================
+              PAYMENT QR CODE PLACEHOLDER
+              TO INSERT YOUR REAL QR CODE IMAGE:
+              1. Save your QR code image in the same folder as this file (e.g. `qr-code.png` or `qr-code.jpg`).
+              2. Replace the `<div class="qr-placeholder-inner">...</div>` block below with:
+                 <img src="qr-code.png" alt="Payment QR Code for ₹500" class="qr-code-img">
+              ==================================================================
+            -->
+            <div class="qr-code-wrapper" aria-label="Payment QR Code Placeholder">
+              <div class="qr-code-box">
+                <!-- START OF QR PLACEHOLDER -->
+                <div class="qr-placeholder-inner">
+                  <div class="qr-wireframe-lines">
+                    <div class="qr-corner top-left"></div>
+                    <div class="qr-corner top-right"></div>
+                    <div class="qr-corner bottom-left"></div>
+                    <div class="qr-scanner-icon">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <rect x="3" y="3" width="7" height="7"/>
+                        <rect x="14" y="3" width="7" height="7"/>
+                        <rect x="3" y="14" width="7" height="7"/>
+                        <rect x="14" y="14" width="7" height="7"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="qr-placeholder-text">PAYMENT QR CODE</div>
+                  <div class="qr-placeholder-subtext">[Insert QR Image Here]</div>
+                </div>
+                <!-- END OF QR PLACEHOLDER -->
+              </div>
+            </div>
+
+            <p class="qr-scan-instruction">
+              Scan the QR code to pay the registration fee.
+            </p>
+
+            <div class="payment-note-box">
+              <p class="payment-note-text">
+                After completing payment, follow the registration instructions provided by the tournament organizers.
+              </p>
+            </div>
+
+            <!-- Informational Screenshot Placeholder Notice -->
+            <div class="receipt-info-box">
+              <div class="receipt-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                  <circle cx="8.5" cy="8.5" r="1.5"/>
+                  <polyline points="21 15 16 10 5 21"/>
+                </svg>
+              </div>
+              <div class="receipt-text">
+                <strong>Save Payment Screenshot:</strong> Keep your UTR/Reference number ready to share with coordinator upon request.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 2: RULES & REGULATIONS
+       ========================================================= -->
+  <section class="section section-rules" id="rules">
+    <div class="container">
+
+      <!-- Section Title Header -->
+      <div class="section-header text-center">
+        <div class="section-tag cricket-tag">OFFICIAL TOURNAMENT GUIDELINES</div>
+        <h2 class="section-title">🏏 SHORT PITCH CRICKET TOURNAMENT</h2>
+        <h3 class="section-subtitle-large">Rules and Regulations</h3>
+        <div class="title-underline"></div>
+        <p class="section-subtitle">
+          Please read all tournament rules carefully. All participating teams must strictly adhere to the guidelines set by the Sports Club of ST PAULS COLLEGE.
+        </p>
+      </div>
+
+      <!-- Rules Cards Grid -->
+      <div class="rules-grid">
+
+        <!-- Rule 1: Team Composition -->
+        <article class="rule-card">
+          <div class="rule-header">
+            <span class="rule-number">01</span>
+            <div class="rule-title-group">
+              <h4 class="rule-title">Team Composition</h4>
+              <span class="rule-category">Squad Guidelines</span>
+            </div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="rule-items-list">
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>Each team must consist of <strong>8 players</strong>.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>Only <strong>registered players</strong> are allowed to participate.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Rule 2: Match Format -->
+        <article class="rule-card">
+          <div class="rule-header">
+            <span class="rule-number">02</span>
+            <div class="rule-title-group">
+              <h4 class="rule-title">Match Format</h4>
+              <span class="rule-category">Tournament Structure</span>
+            </div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="rule-items-list">
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>Each match will be played for <strong>5 overs per team</strong>.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>The tournament will follow a <strong>knockout format</strong>.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>The team losing a match will be <strong>eliminated</strong> from the tournament.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Rule 3: Batting Powerplay -->
+        <article class="rule-card rule-card-featured">
+          <div class="rule-header">
+            <span class="rule-number highlight-badge">03</span>
+            <div class="rule-title-group">
+              <h4 class="rule-title">Batting Powerplay</h4>
+              <span class="rule-category highlight-text">Double Runs Feature</span>
+            </div>
+            <div class="rule-icon-box gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="rule-items-list">
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>Each team will be allowed <strong>one Batting Powerplay over</strong> per innings.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>During the Powerplay over, <strong>all runs scored will be doubled</strong>.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>The Powerplay over must be declared to the umpire <strong>before the over begins</strong>.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>The umpire's decision regarding Powerplay runs will be <strong>final</strong>.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Rule 4: Standing Throw Rule -->
+        <article class="rule-card">
+          <div class="rule-header">
+            <span class="rule-number">04</span>
+            <div class="rule-title-group">
+              <h4 class="rule-title">Standing Throw Rule</h4>
+              <span class="rule-category">Bowling Regulations</span>
+            </div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="rule-items-list">
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>The ball must be delivered using a <strong>standing throw action</strong>.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span><strong>Running or taking a full run-up</strong> before delivering the ball is <strong>not permitted</strong>.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>The umpire will decide whether the delivery follows the rules.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Rule 5: Umpire's Decision -->
+        <article class="rule-card rule-card-warning">
+          <div class="rule-header">
+            <span class="rule-number warning-badge">05</span>
+            <div class="rule-title-group">
+              <h4 class="rule-title">Umpire's Decision</h4>
+              <span class="rule-category warning-text">Authority & Discipline</span>
+            </div>
+            <div class="rule-icon-box red">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="rule-items-list">
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>The umpire's decision on all matters, including dismissals, runs, wides, no-balls and rule violations, shall be <strong>FINAL AND BINDING</strong>.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span><strong>Arguments or misconduct</strong> towards the umpire will <strong>not be tolerated</strong>.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Rule 6: Registration -->
+        <article class="rule-card">
+          <div class="rule-header">
+            <span class="rule-number">06</span>
+            <div class="rule-title-group">
+              <h4 class="rule-title">Registration</h4>
+              <span class="rule-category">Deadlines & Policy</span>
+            </div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/>
+                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="rule-items-list">
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>The last date for team registration is <strong>November 10th</strong>.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span><strong>No on-the-spot registrations</strong> will be accepted.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>Teams must complete registration before the deadline to participate.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Rule 7: General Rules -->
+        <article class="rule-card full-span-card">
+          <div class="rule-header">
+            <span class="rule-number">07</span>
+            <div class="rule-title-group">
+              <h4 class="rule-title">General Rules</h4>
+              <span class="rule-category">Code of Conduct</span>
+            </div>
+            <div class="rule-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+          </div>
+          <ul class="rule-items-list grid-rules">
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>All teams must report on time for their scheduled matches.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>Teams must maintain discipline and sportsmanship throughout the tournament.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>Any disputes or misconduct will be handled by the tournament organisers.</span>
+            </li>
+            <li>
+              <span class="bullet-check">✓</span>
+              <span>The organisers reserve the right to make decisions regarding unforeseen circumstances.</span>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+      <!-- Visually Highlighted Sportsmanship Banner -->
+      <div class="sportsmanship-banner">
+        <div class="banner-cricket-icons left" title="Verified Tournament Rule">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        
+        <div class="sportsmanship-content">
+          <div class="trophy-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2"/>
+              <path d="M18 9h2a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"/>
+              <path d="M4 22h16"/>
+              <path d="M10 14.66V17c0 .55-.45 1-1 1H7c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1h10c.55 0 1-.45 1-1v-1c0-.55-.45-1-1-1h-2c-.55 0-1-.45-1-1v-2.34"/>
+              <path d="M6 3h12v7a6 6 0 0 1-12 0V3z"/>
+            </svg>
+          </div>
+          <h3 class="sportsmanship-motto">PLAY FAIR. PLAY HARD. RESPECT THE GAME! 🏏</h3>
+          <p class="sportsmanship-wish">Best of luck to all participating teams!</p>
+          
+          <!-- Back to Registration Link/Button -->
+          <div class="sportsmanship-action">
+            <a href="#registration" class="btn btn-primary btn-large">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 19V5M5 12l7-7 7 7"/>
+              </svg>
+              Go to Registration Fees & Payment
+            </a>
+          </div>
+        </div>
+
+        <div class="banner-cricket-icons right" title="Verified Tournament Rule">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER & CONTACT INFORMATION SECTION
+       ========================================================= -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-container">
+      
+      <!-- Top Grid: Contacts & About -->
+      <div class="footer-grid">
+        
+        <!-- Organizer & College Overview -->
+        <div class="footer-col footer-about">
+          <div class="footer-brand-title">ST PAULS COLLEGE</div>
+          <div class="footer-brand-sub">Affiliated to Bangalore University &bull; NAAC Accredited</div>
+          <p class="footer-org">
+            <strong>Organizer:</strong> Sports Club of ST PAULS COLLEGE
+          </p>
+          <p class="footer-desc">
+            Organizing the <strong>Under 19 ST PAULS CUP</strong> - A premier PU Short Pitch Cricket Tournament bringing together collegiate talent at ST PAULS COLLEGE CRICKET GROUND.
+          </p>
+          <div class="footer-dates-badge">
+            <span>📅 Tournament Dates: November 11, 12 & 13</span>
+          </div>
+        </div>
+
+        <!-- Official Coordinators Contact Cards -->
+        <div class="footer-col footer-contacts">
+          <h4 class="footer-col-title">For more information contact:</h4>
+          
+          <div class="contact-cards-list">
+            
+            <!-- Contact 1: Physical Education Director -->
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-role">Physical Education Director</span>
+                <span class="contact-name">Lt. Manjunath sir</span>
+                <a href="tel:9036506059" class="contact-tel-link" aria-label="Call Lt. Manjunath sir at 9036506059">
+                  <svg class="tel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <span>9036506059</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact 2: Faculty Coordinator -->
+            <div class="contact-card">
+              <div class="contact-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+              <div class="contact-details">
+                <span class="contact-role">Faculty Coordinator</span>
+                <span class="contact-name">Yashas Girish Sir</span>
+                <a href="tel:8971001861" class="contact-tel-link" aria-label="Call Yashas Girish Sir at 8971001861">
+                  <svg class="tel-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <span>8971001861</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer-col footer-links">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#registration">Registration Fees & Payment</a></li>
+            <li><a href="#rules">Rules & Regulations</a></li>
+            <li><a href="#contact">Contact Organizers</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar with Tournament & College Credentials -->
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-content">
+          <p class="copyright-text">
+            &copy; Under 19 ST PAULS CUP &bull; Sports Club of ST PAULS COLLEGE.
+          </p>
+          <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to Top">
+            <span>Back to Top</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 15l-6-6-6 6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
