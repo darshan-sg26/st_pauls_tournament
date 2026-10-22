@@ -38,48 +38,6 @@ If you have Node.js or Python installed:
 
 ---
 
-## 🖼️ How to Replace Placeholders
-
-### 1. Adding Your College Logo
-In `index.html`, locate the comment:
-`<!-- COLLEGE LOGO PLACEHOLDER -->` (around lines 40–55)
-
-Replace:
-```html
-<div class="logo-placeholder">
-  ...
-</div>
-```
-
-With your actual image file:
-```html
-<img src="college-logo.png" alt="ST PAULS COLLEGE Logo" class="college-logo-img">
-```
-*(Make sure to put your `college-logo.png` file in the same folder as `index.html`)*.
-
----
-
-### 2. Adding Your Real Payment QR Code
-In `index.html`, locate the comment:
-`<!-- PAYMENT QR CODE PLACEHOLDER -->` (around lines 230–260)
-
-Replace:
-```html
-<div class="qr-placeholder-inner">
-  ...
-</div>
-```
-
-With your actual QR image:
-```html
-<img src="payment-qr.png" alt="Payment QR Code for ₹500" class="qr-code-img">
-```
-*(Make sure to put your `payment-qr.png` file in the same folder as `index.html`)*.
-
-The CSS is already programmed so that your image will automatically remain a crisp, responsive square with high contrast.
-
----
-
 ## 📋 Information Included on the Website
 
 - **College Name:** ST PAULS COLLEGE
@@ -89,7 +47,6 @@ The CSS is already programmed so that your image will automatically remain a cri
 - **Competition Type:** A PU Cricket Competition (Knockout)
 - **Tournament Dates:** November 11, 12 & 13
 - **Venue:** ST PAULS COLLEGE CRICKET GROUND
-- **Registration Fee:** ₹500 per team
 - **Registration Deadline:** November 10th
 - **Complete Rules & Regulations:**
   1. Team Composition (8 players)
@@ -100,5 +57,5 @@ The CSS is already programmed so that your image will automatically remain a cri
   6. Registration (Deadline Nov 10th, no on-the-spot)
   7. General Rules & Sportsmanship
 - **Coordinator Contacts (with clickable `tel:` links):**
-  - **Physical Education Director:** Lt. Manjunath sir — `9036506059`
-  - **Faculty Coordinator:** Yashas Girish Sir — `8971001861`
+  - **Physical Education Director:** Lt. Manjunath — `9036506059`
+  - **Faculty Coordinator:** Mr. Yashas Girish — `8971001861`
